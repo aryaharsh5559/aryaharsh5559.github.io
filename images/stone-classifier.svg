@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f6e6e"/>
+    </marker>
+  </defs>
+  <rect width="800" height="450" fill="#ffffff"/>
+
+  <!-- AWS container -->
+  <rect x="206" y="84" width="574" height="168" rx="12" fill="none" stroke="#0f6e6e" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <rect x="222" y="74" width="292" height="20" fill="#ffffff"/>
+  <text x="228" y="89" font-size="13" font-weight="700" fill="#0f6e6e">Deployed on AWS · batch + near-real-time</text>
+
+  <!-- Input -->
+  <rect x="24" y="118" width="156" height="100" rx="10" fill="#f3f5f7" stroke="#d9dde2"/>
+  <g fill="#c9ced4" stroke="#9aa3ad" stroke-width="1">
+    <ellipse cx="74" cy="152" rx="17" ry="12"/>
+    <ellipse cx="106" cy="146" rx="13" ry="10" fill="#b7d8d5"/>
+    <ellipse cx="132" cy="156" rx="15" ry="11" fill="#e2d3c2"/>
+  </g>
+  <text x="102" y="192" text-anchor="middle" font-size="13" font-weight="600" fill="#1c1f23">Stone images</text>
+  <text x="102" y="208" text-anchor="middle" font-size="11.5" fill="#5d6570">collected in-house</text>
+
+  <line x1="184" y1="168" x2="226" y2="168" stroke="#0f6e6e" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Preprocess -->
+  <rect x="230" y="118" width="160" height="100" rx="10" fill="#e3f1f0" stroke="#0f6e6e" stroke-width="1.5"/>
+  <text x="310" y="156" text-anchor="middle" font-size="13" font-weight="600" fill="#1c1f23">OpenCV</text>
+  <text x="310" y="174" text-anchor="middle" font-size="13" font-weight="600" fill="#1c1f23">preprocessing</text>
+  <text x="310" y="196" text-anchor="middle" font-size="11.5" fill="#5d6570">+ data augmentation</text>
+
+  <line x1="394" y1="168" x2="430" y2="168" stroke="#0f6e6e" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- CNN -->
+  <rect x="434" y="118" width="160" height="100" rx="10" fill="#0f6e6e"/>
+  <g fill="#ffffff" opacity="0.35">
+    <rect x="452" y="132" width="10" height="34" rx="2"/>
+    <rect x="468" y="137" width="10" height="24" rx="2"/>
+    <rect x="484" y="141" width="10" height="16" rx="2"/>
+  </g>
+  <text x="560" y="155" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">CNN</text>
+  <text x="514" y="186" text-anchor="middle" font-size="12.5" fill="#ffffff">image classifier</text>
+  <text x="514" y="204" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">95%+ accuracy</text>
+
+  <line x1="598" y1="168" x2="634" y2="168" stroke="#0f6e6e" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Output -->
+  <rect x="638" y="118" width="128" height="100" rx="10" fill="#f3f5f7" stroke="#d9dde2"/>
+  <text x="702" y="160" text-anchor="middle" font-size="13" font-weight="600" fill="#1c1f23">Stone type</text>
+  <text x="702" y="182" text-anchor="middle" font-size="11.5" fill="#5d6570">classified in</text>
+  <text x="702" y="197" text-anchor="middle" font-size="11.5" fill="#5d6570">real time</text>
+
+  <!-- Database -->
+  <line x1="102" y1="222" x2="102" y2="298" stroke="#0f6e6e" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="702" y1="222" x2="702" y2="298" stroke="#0f6e6e" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="24" y="302" width="742" height="76" rx="10" fill="#f3f5f7" stroke="#d9dde2"/>
+  <g fill="none" stroke="#0f6e6e" stroke-width="1.5">
+    <ellipse cx="66" cy="326" rx="18" ry="6" fill="#e3f1f0"/>
+    <path d="M48,326 v26 a18,6 0 0 0 36,0 v-26"/>
+    <path d="M48,339 a18,6 0 0 0 36,0"/>
+  </g>
+  <text x="102" y="334" font-size="13" font-weight="600" fill="#1c1f23">Relational database, loaded by Python + SQL pipelines</text>
+  <text x="102" y="355" font-size="12" fill="#5d6570">Structured data stored with database keys, so every result stays traceable.</text>
+
+  <text x="24" y="418" font-size="13" fill="#5d6570">Built for a working wholesale stone distributor.</text>
+</svg>

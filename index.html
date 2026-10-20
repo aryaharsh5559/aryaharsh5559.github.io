@@ -3,8 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Harsh Arya · Data Engineer &amp; Data Scientist</title>
+  <title>Harsh Arya · Data Portfolio</title>
   <meta name="description" content="Portfolio of Harsh Arya: data pipelines, machine learning and analytics projects. M.S. Data Science, UC San Diego.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://aryaharsh5559.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aryaharsh5559.github.io/">
+  <meta property="og:title" content="Harsh Arya · Data Portfolio">
+  <meta property="og:description" content="Data pipelines, machine learning and analytics projects. M.S. Data Science, UC San Diego.">
+  <meta property="og:image" content="https://aryaharsh5559.github.io/images/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,12 +35,17 @@
 
   <main id="top">
     <section class="hero wrap">
-      <p class="eyebrow">Data Engineer · Data Scientist · San Diego, CA</p>
-      <h1>I build data pipelines, and the models and dashboards that run on them.</h1>
+      <p class="eyebrow">Open to data engineering, data science and analytics roles</p>
+      <h1>Hi, I'm Harsh.</h1>
       <p class="lede">
-        M.S. in Data Science from UC San Diego (4.0 GPA). For three years I was the sole data analyst at a
-        20-person wholesale distributor, where I built the company's data function from scratch:
-        ETL pipelines, Tableau reporting, demand forecasting and customer segmentation.
+        M.S. in Data Science from UC San Diego (4.0 GPA). For nearly three years I was the sole data analyst at a
+        20-person wholesale distributor, where I built the company's data function from scratch: ETL pipelines,
+        Tableau reporting, demand forecasting and customer segmentation.
+      </p>
+      <p class="lede">
+        Alongside that job, my master's took me deeper into machine learning, NLP, big data with Spark, data modeling and
+        cloud computing. The projects below put that to work: a tested ELT platform on dbt and Snowflake,
+        a Neo4j knowledge graph that feeds an LLM system, and statistical studies of public data.
       </p>
       <div class="actions">
         <a class="btn btn-primary" href="#projects">See projects</a>
@@ -73,8 +88,8 @@
 
       <div class="grid">
         <article class="project">
-          <a class="thumb" href="https://aryaharsh5559.github.io/explainable-llm-financial-advisor/" target="_blank" rel="noopener">
-            <img src="images/llm-advisor.png" alt="Bar chart: tuning raised macro F1 from 25% to 60% and balanced accuracy from 33% to 67%" loading="lazy">
+          <a class="thumb" href="images/llm-pipeline.svg" target="_blank" rel="noopener" title="Open the full-size diagram">
+            <img src="images/llm-pipeline.svg" alt="Diagram: five data sources feed a five-stage ETL into a Neo4j knowledge graph (what I built), which the teammates' LLM agents and evaluation query" loading="lazy">
           </a>
           <div class="body">
             <div class="tags"><span class="tag de">Data Engineering</span><span class="tag ds">ML / AI</span></div>
@@ -104,15 +119,15 @@
         </article>
 
         <article class="project" id="stone-classifier">
-          <div class="thumb thumb-placeholder" aria-hidden="true">
-            <span>Write-up coming soon</span>
-          </div>
+          <a class="thumb" href="images/stone-classifier.svg" target="_blank" rel="noopener" title="Open the full-size diagram">
+            <img src="images/stone-classifier.svg" alt="Diagram: stone images go through OpenCV preprocessing into a CNN classifier on AWS, with results stored in a relational database" loading="lazy">
+          </a>
           <div class="body">
             <div class="tags"><span class="tag ds">ML / AI</span><span class="tag de">Data Engineering</span></div>
             <h3>Automated Stone Classification System</h3>
             <p class="meta">Craftstones USA · 2024</p>
             <p class="summary">
-              A computer-vision system that sorts stones automatically, built for a working wholesale business.
+              A computer-vision system that classifies stones in real time, built for a working wholesale business.
             </p>
             <ul>
               <li>CNN classifier with 95%+ accuracy in real time, using data augmentation and OpenCV preprocessing.</li>
@@ -120,15 +135,12 @@
               <li>Deployed on AWS for batch and near-real-time processing.</li>
             </ul>
             <p class="stack">Python · CNNs · OpenCV · SQL · AWS</p>
-            <div class="links">
-              <span class="soon">Code and demo coming soon</span>
-            </div>
           </div>
         </article>
 
         <article class="project">
           <a class="thumb" href="https://aryaharsh5559.github.io/lol-early-game-analysis/" target="_blank" rel="noopener">
-            <img src="images/lol.png" alt="Bar chart: win rate rises from 24% with no early objectives to 80% with all three" loading="lazy">
+            <img src="images/lol-permutation.png" alt="Permutation test histogram: the observed 13-point first-dragon win-rate gap sits far outside the null distribution" loading="lazy">
           </a>
           <div class="body">
             <div class="tags"><span class="tag ds">Data Science</span></div>
@@ -203,6 +215,7 @@
             <h3>Data Analyst &amp; Operations · Craftstones USA</h3>
             <span class="when">Sep 2023 – Apr 2026</span>
           </div>
+          <p class="entry-note">The company's only data person. I built its data function from scratch, alongside operations work.</p>
           <ul>
             <li>Built end-to-end ETL pipelines from SQL databases and spreadsheets into Tableau dashboards, saving more than 6 hours of manual reporting a week.</li>
             <li>Built a regression-based demand forecast on 3+ years of sales history, cutting excess stock by 25%.</li>

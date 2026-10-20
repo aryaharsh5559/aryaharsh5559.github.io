@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harsh Arya · Data Engineer &amp; Data Scientist</title>
+  <meta name="description" content="Portfolio of Harsh Arya: data pipelines, machine learning and analytics projects. M.S. Data Science, UC San Diego.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">Harsh Arya</a>
+      <nav aria-label="Main">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <p class="eyebrow">Data Engineer · Data Scientist · San Diego, CA</p>
+      <h1>I build data pipelines, and the models and dashboards that run on them.</h1>
+      <p class="lede">
+        M.S. in Data Science from UC San Diego (4.0 GPA). For three years I was the sole data analyst at a
+        20-person wholesale distributor, where I built the company's data function from scratch:
+        ETL pipelines, Tableau reporting, demand forecasting and customer segmentation.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#projects">See projects</a>
+        <a class="btn" href="mailto:harsharya08@gmail.com">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/harsharya500/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/aryaharsh5559" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <section id="projects" class="section wrap">
+      <h2>Projects</h2>
+
+      <article class="project featured">
+        <a class="thumb thumb-top" href="https://aryaharsh5559.github.io/Wholesale-inventory-analytics/" target="_blank" rel="noopener">
+          <img src="images/wholesale.png" alt="Inventory and reorder dashboard showing revenue, dead stock and A-class SKUs to reorder" loading="lazy">
+        </a>
+        <div class="body">
+          <div class="tags"><span class="tag de">Data Engineering</span><span class="tag da">Analytics</span></div>
+          <h3>Craftstones Data Platform: An Ideal-State Redesign</h3>
+          <p class="summary">
+            If I could rebuild the data platform from my distributor job from zero, how would I do it?
+            A nightly ELT pipeline on synthetic ERP data that answers which products to reorder, when,
+            and where cash is tied up in dead stock.
+          </p>
+          <ul>
+            <li>dlt loads raw data, dbt builds staging, intermediate and contract-enforced marts, and Dagster orchestrates it with full lineage. GitHub Actions rebuilds everything nightly.</li>
+            <li>214 dbt data tests, 8 dbt unit tests and 67 pytest tests, with CI on every pull request.</li>
+            <li>Runs on DuckDB or Snowflake. All 18 marts came out identical on both.</li>
+            <li>A what-if page recalculates safety stock and reorder points for every SKU in the browser.</li>
+          </ul>
+          <p class="stack">Python · SQL · dlt · dbt · Dagster · DuckDB · Snowflake · Docker · GitHub Actions</p>
+          <div class="links">
+            <a href="https://aryaharsh5559.github.io/Wholesale-inventory-analytics/" target="_blank" rel="noopener">Live dashboard</a>
+            <a href="https://aryaharsh5559.github.io/Wholesale-inventory-analytics/what-if/" target="_blank" rel="noopener">What-if tool</a>
+            <a href="https://aryaharsh5559.github.io/Wholesale-inventory-analytics/dbt-docs/" target="_blank" rel="noopener">dbt docs</a>
+            <a href="https://github.com/aryaharsh5559/Wholesale-inventory-analytics" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="grid">
+        <article class="project">
+          <a class="thumb" href="https://aryaharsh5559.github.io/explainable-llm-financial-advisor/" target="_blank" rel="noopener">
+            <img src="images/llm-advisor.png" alt="Bar chart: tuning raised macro F1 from 25% to 60% and balanced accuracy from 33% to 67%" loading="lazy">
+          </a>
+          <div class="body">
+            <div class="tags"><span class="tag de">Data Engineering</span><span class="tag ds">ML / AI</span></div>
+            <h3>Multi-Agent Graph RAG for Explainable Financial Advice</h3>
+            <p class="meta">UC San Diego capstone · team of 4 · 2026</p>
+            <p class="summary">
+              Buy, hold or sell calls on 60 stocks, each with an explanation that cites the data behind it.
+            </p>
+            <div class="role">
+              <p><strong>What I built:</strong> the data side, from ingestion through the Neo4j knowledge graph the agents retrieve from.</p>
+              <ul>
+                <li>Ingestion from Finnhub, FNSPID and three other public financial datasets.</li>
+                <li>A five-stage, leakage-free ETL pipeline over about 440K stock-day records.</li>
+                <li>The knowledge graph: 60 tickers, 5 node and 5 relationship types, about 7K news articles.</li>
+              </ul>
+            </div>
+            <p class="team-note">
+              <strong>Built by teammates on top of the graph:</strong> the LLM agents, prompt tuning and evaluation.
+              Tuning raised macro F1 from 0.25 to 0.60 and doubled balanced accuracy.
+            </p>
+            <p class="stack">My stack: Python · pandas · Neo4j · Cypher · Docker</p>
+            <div class="links">
+              <a href="https://aryaharsh5559.github.io/explainable-llm-financial-advisor/" target="_blank" rel="noopener">Project report</a>
+              <a href="https://github.com/aryaharsh5559/explainable-llm-financial-advisor" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" id="stone-classifier">
+          <div class="thumb thumb-placeholder" aria-hidden="true">
+            <span>Write-up coming soon</span>
+          </div>
+          <div class="body">
+            <div class="tags"><span class="tag ds">ML / AI</span><span class="tag de">Data Engineering</span></div>
+            <h3>Automated Stone Classification System</h3>
+            <p class="meta">Craftstones USA · 2024</p>
+            <p class="summary">
+              A computer-vision system that sorts stones automatically, built for a working wholesale business.
+            </p>
+            <ul>
+              <li>CNN classifier with 95%+ accuracy in real time, using data augmentation and OpenCV preprocessing.</li>
+              <li>Python and SQL pipelines for image collection and preprocessing, loaded into a relational database with full traceability.</li>
+              <li>Deployed on AWS for batch and near-real-time processing.</li>
+            </ul>
+            <p class="stack">Python · CNNs · OpenCV · SQL · AWS</p>
+            <div class="links">
+              <span class="soon">Code and demo coming soon</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <a class="thumb" href="https://aryaharsh5559.github.io/lol-early-game-analysis/" target="_blank" rel="noopener">
+            <img src="images/lol.png" alt="Bar chart: win rate rises from 24% with no early objectives to 80% with all three" loading="lazy">
+          </a>
+          <div class="body">
+            <div class="tags"><span class="tag ds">Data Science</span></div>
+            <h3>Snowball or Comeback? Early Objectives in Pro League of Legends</h3>
+            <p class="meta">12,415 professional matches · 2022 season</p>
+            <p class="summary">
+              Does taking the first dragon actually help a team win, or is it just a sign the team was already ahead?
+            </p>
+            <ul>
+              <li>In games that were close on gold at 15 minutes, first-dragon teams still won 56.6% vs 43.4% (permutation test, p &lt; 0.0001).</li>
+              <li>A win model using only 15-minute data reaches about 75% accuracy.</li>
+              <li>A fairness test found no difference between major and minor leagues (p = 0.91).</li>
+            </ul>
+            <p class="stack">Python · pandas · scikit-learn · hypothesis testing</p>
+            <div class="links">
+              <a href="https://aryaharsh5559.github.io/lol-early-game-analysis/" target="_blank" rel="noopener">Interactive report</a>
+              <a href="https://github.com/aryaharsh5559/lol-early-game-analysis" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <a class="thumb thumb-cover" href="https://aryaharsh5559.github.io/us-county-health-map/" target="_blank" rel="noopener">
+            <img src="images/county-health.jpg" alt="U.S. county map colored by years above or below predicted life expectancy" loading="lazy">
+          </a>
+          <div class="body">
+            <div class="tags"><span class="tag ds">Data Science</span><span class="tag viz">Visualization</span></div>
+            <h3>Which U.S. Counties Beat the Odds on Life Expectancy?</h3>
+            <p class="meta">3,060 counties · County Health Rankings 2024</p>
+            <p class="summary">
+              Predicts each county's life expectancy from income and access to care, then maps who lives longer or shorter than expected.
+            </p>
+            <ul>
+              <li>Out-of-fold gradient boosting with 5-fold cross-validation: R² 0.58, mean error 1.7 years.</li>
+              <li>Interactive D3 map with county profiles compared against income peers.</li>
+            </ul>
+            <p class="stack">Python · scikit-learn · D3.js</p>
+            <div class="links">
+              <a href="https://aryaharsh5559.github.io/us-county-health-map/" target="_blank" rel="noopener">Live map</a>
+              <a href="https://github.com/aryaharsh5559/us-county-health-map" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project wide">
+          <a class="thumb thumb-cover" href="https://aryaharsh5559.github.io/global-development-data-story/" target="_blank" rel="noopener">
+            <img src="images/global-dev.jpg" alt="Animated bubble chart of GDP per capita against life expectancy, sized by population" loading="lazy">
+          </a>
+          <div class="body">
+            <div class="tags"><span class="tag viz">Visualization</span></div>
+            <h3>Echoes of History: 60 Years of Global Development</h3>
+            <p class="meta">World Bank data, 1960–2020 · team of 4</p>
+            <p class="summary">
+              A scroll-driven story asking whether the world grew more equal in health or in wealth. Income gaps stayed wide; life expectancy converged.
+            </p>
+            <p class="role"><strong>My part:</strong> the World Bank data loader, the narrative and scrollytelling timeline, and the West-vs-Rest summary.</p>
+            <p class="stack">JavaScript · D3.js · Mapbox GL · Scrollama</p>
+            <div class="links">
+              <a href="https://aryaharsh5559.github.io/global-development-data-story/" target="_blank" rel="noopener">Live story</a>
+              <a href="https://github.com/aryaharsh5559/global-development-data-story" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section wrap">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Data Analyst &amp; Operations · Craftstones USA</h3>
+            <span class="when">Sep 2023 – Apr 2026</span>
+          </div>
+          <ul>
+            <li>Built end-to-end ETL pipelines from SQL databases and spreadsheets into Tableau dashboards, saving more than 6 hours of manual reporting a week.</li>
+            <li>Built a regression-based demand forecast on 3+ years of sales history, cutting excess stock by 25%.</li>
+            <li>Segmented customers with clustering and RFM analysis to target engagement.</li>
+            <li>Built a CNN stone classification system with 95%+ accuracy, deployed on AWS (<a href="#stone-classifier">project details</a>).</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Logistics Manager · Sugilite Co</h3>
+            <span class="when">May 2021 – Sep 2023</span>
+          </div>
+          <ul>
+            <li>Ran logistics for twice-yearly international gem shows, moving 7–15 tons of product across several countries and tracking shipments in Excel and Snowflake.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="sub">Education</h2>
+      <div class="timeline">
+        <div class="entry">
+          <div class="entry-head">
+            <h3>M.S. Data Science · UC San Diego</h3>
+            <span class="when">2024 – 2026</span>
+          </div>
+          <p>GPA 4.0. Machine learning, NLP, big data (Spark), data modeling, cloud computing.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <h3>B.S. Aerospace Engineering · UC Davis</h3>
+            <span class="when">2017 – 2021</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section wrap">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <div><dt>Languages</dt><dd>Python, SQL, Java, C/C++</dd></div>
+        <div><dt>Data engineering</dt><dd>ETL/ELT, dbt, dlt, Dagster, Snowflake, DuckDB, PostgreSQL, Spark/PySpark, Neo4j</dd></div>
+        <div><dt>ML &amp; AI</dt><dd>scikit-learn, PyTorch, CNNs, LLMs, RAG, forecasting, regression, clustering, classification</dd></div>
+        <div><dt>Analytics</dt><dd>Hypothesis testing, Tableau, D3.js, Excel</dd></div>
+        <div><dt>Platforms</dt><dd>AWS, Docker, Git, GitHub Actions</dd></div>
+      </dl>
+    </section>
+
+    <section id="contact" class="section wrap contact">
+      <h2>Get in touch</h2>
+      <p>I'm looking for data engineering, data science and analytics roles. The fastest way to reach me is email.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:harsharya08@gmail.com">harsharya08@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/harsharya500/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/aryaharsh5559" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>© 2026 Harsh Arya</p>
+  </footer>
+</body>
+</html>
